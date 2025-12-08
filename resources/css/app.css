@@ -1,0 +1,14 @@
+.verde{
+    background-color: rgb(54, 189, 54) !important;
+}
+.bordeVerde {
+    border: 2px solid rgb(54, 189, 54);
+}
+.titulosMorados{
+    color: rgb(146, 24, 164);
+}
+.story-script-regular {
+  font-family: "Story Script", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
