@@ -53,4 +53,16 @@ class RegistrarController extends Controller
 
         return redirect()->route('peludito');
     }
+    public function encontrarPerroActualizar($id)
+    {
+        $perro = Perro::find($id);
+        return view('actualizarperro', compact('perro'));
+    }
+    public function destroy($id)
+    {
+        $perro = Perro::find($id);
+        $perro->delete();
+
+        return redirect()->route('peludito');
+    }
 }

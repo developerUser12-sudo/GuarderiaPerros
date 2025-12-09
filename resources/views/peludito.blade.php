@@ -97,13 +97,15 @@
                                     </tbody>
                                 </table>
                                 <div class="d-flex flex-row gap-2">
-                                    <form action="">
-                                    <input type="submit" value="Editar" class="btn verde text-light">
-                                </form>
-                                <form action="" method="POST">
-                                    <input type="submit" value="Eliminar" class="btn verde text-light">
+                                    <form action="{{ route('actualizarperro',$perro->id) }}">
+                                        <input type="submit" value="Editar" class="btn verde text-light">
+                                    </form>
+                                    <form action="{{ route('eliminarperro',$perro->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <input type="submit" value="Eliminar" class="btn verde text-light">
 
-                                </form>
+                                    </form>
                                 </div>
                             </div>
 

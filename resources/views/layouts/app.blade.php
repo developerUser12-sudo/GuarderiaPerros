@@ -29,7 +29,7 @@
       </button>
       <a class="navbar-brand text-white" href="{{ config('app.url') }}"><img src="" alt="Logo"></a>
       <div class="collapse navbar-collapse d-lg-flex justify-content-between" id="navbarNavDropdown">
-        <ul class="navbar-nav gap-3">
+        <ul class="navbar-nav gap-0 gap-lg-3">
           <li class="nav-item">
             <a class="nav-link  text-white" aria-current="page" href="{{ route('peludito') }}">Tu peludito</a>
           </li>
@@ -40,7 +40,7 @@
             <a class="nav-link text-white" href="{{ route('reservar') }}">Reserva</a>
           </li>
         </ul>
-        <div>
+        <div class="mt-2 mt-lg-0">
           @auth
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
