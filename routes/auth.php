@@ -51,10 +51,8 @@ Route::middleware('auth')->group(function () {
         $perros = $user->perros()->get();
         return view('peludito',compact('perrosCount','perros'));
     })->name('peludito');
-    Route::get('actualizar-peludito/{id}', function () {
-        return view('actualizarperro');
-    })->name('actualizarperro');
-     Route::get('actualizar-peludito/{id}', [RegistrarController::class, 'encontrarPerroActualizar'])->name('actualizarperro');
+    Route::get('actualizar-peludito/{id}', [RegistrarController::class, 'encontrarPerroActualizar'])->name('actualizarperro');
+    Route::put('actualizar-peludito/{id}', [RegistrarController::class, 'actualizarPerro'])->name('actualizarperroput');
     Route::delete('eliminarperro/{id}', [RegistrarController::class, 'destroy'])->name('eliminarperro');
     Route::get('verify-email', EmailVerificationPromptController::class)
         ->name('verification.notice');
